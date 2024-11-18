@@ -1,9 +1,20 @@
 fileFormatVersion: 2
-guid: 4df37b943e4ea944abdac8a534918325
+guid: 7f5ce750b4b56ea4caf469164c21ae56
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - player: {fileID: 686374417973811733, guid: 2ed714d4b68ffc94ebf8ddaa9e7d565d, type: 3}
+  - enemyOne: {fileID: 4581836376663872257, guid: 3fcd728be90940d4ba14f8ae7a6b7a89, type: 3}
+  - cloud: {instanceID: 0}
+  - coin: {fileID: 3257856500092387234, guid: b0ea1d84ae25dfb4380a1fb7def5f0c9, type: 3}
+  - powerup: {fileID: 1866204253808130127, guid: 27a5c195cf365624698a4bedbf51957b, type: 3}
+  - powerUp: {fileID: 8300000, guid: b953e2325246e32409191d573c7ed211, type: 3}
+  - powerDown: {fileID: 8300000, guid: ac3c0fcff92c7eb449fda5682eb452d9, type: 3}
+  - scoreText: {instanceID: 0}
+  - gameOverText: {instanceID: 0}
+  - restartText: {instanceID: 0}
+  - powerupText: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
