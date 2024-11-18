@@ -13,6 +13,7 @@ public class GameManager : MonoBehaviour
     public GameObject cloud;
     public GameObject powerup;
 
+
     public AudioClip powerUp;
     public AudioClip powerDown;
 
@@ -21,6 +22,7 @@ public class GameManager : MonoBehaviour
     private bool isPlayerAlive;
 
     public TextMeshProUGUI scoreText;
+    public TextMeshProUGUI livesText;
     public TextMeshProUGUI gameOverText;
     public TextMeshProUGUI restartText;
     public TextMeshProUGUI powerupText;
@@ -93,7 +95,10 @@ public class GameManager : MonoBehaviour
     {
         powerupText.text = whichPowerup;
     }
-
+    public void SetLivesCount(int lives)
+    {
+        livesText.text = "Lives: " + lives;
+    }
     public void PlayPowerUp()
     {
         AudioSource.PlayClipAtPoint(powerUp, Camera.main.transform.position);

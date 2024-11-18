@@ -20,6 +20,7 @@ public class Player : MonoBehaviour
     public GameObject bullet;
     public GameObject explosion;
     public GameObject thruster;
+    public GameObject shield;
 
     // Start is called before the first frame update
     void Start()
@@ -74,18 +75,35 @@ public class Player : MonoBehaviour
             }
         }
     }
+    public void ShieldSprite()
+    {
+        if (hasShield == false)
+        {
+            shield.SetActive(false);
+        }
+        else if (hasShield == true)
+        {
+            shield.SetActive(true);
 
+        }
+    }
     public void LoseALife()
     {
         if (hasShield == false)
         {
+            ShieldSprite();
             lives--;
-        } else if (hasShield == true)
+            FindObjectOfType<GameManager>().SetLivesCount(lives);
+
+        }
+        else if (hasShield == true)
         {
             //lose the shield
             //no longer have a shield
-        }
+            hasShield = false;
+            shield.SetActive(false);
 
+        }
         if (lives == 0)
         {
             gameManager.GameOver();
@@ -140,6 +158,7 @@ public class Player : MonoBehaviour
                     //shield
                     gameManager.UpdatePowerupText("Picked up Shield!");
                     hasShield = true;
+                    shield.SetActive(true);
                     break;
             }
             Destroy(whatIHit.gameObject);
